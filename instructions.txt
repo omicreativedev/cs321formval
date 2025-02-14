@@ -1,0 +1,116 @@
+The forms project – due date TBA
+
+1.	Your form 
+You will in groups of 3 or 4 consider the following:
+
+What would a registration page for an airline frequent flyer program look like?
+
+You done some forms with personal information already but there will be other kinds of information you might want to add.
+
+The form should certainly include:
+      Family and given names.(both required)
+      Home address including a drop down list for states and/or Canadian 
+                  provinces; required) & Country (U.S. or Canada.  Presumably
+                  there are other pages for other countries this airline serves.
+                 (Please find the drop-down lists of states & provinces online.)
+                  When validating you should note that Canadian postal codes
+                  follow a different format from U.S. zip codes.
+      Date of birth – please use drop down lists or a date finder (required)
+      Telephone number(s) 
+      Radio buttons to choose a salutation (Mr./ Ms./ Dr./Rev./and n/a)
+       An email (required)
+      Check boxes for at least three other question of your own choosing that 
+             you think an airline might include.  For example, (do participants want 
+             text messages for their bookings? If so what phone number) you 
+            might add for enhanced functionality. Do they have seat preferences?
+            etc.
+      A password (you decide on how secure) and confirm password- please
+            use the password type so that the characters are hidden.
+     At least one field which asks users to enter a number (not from a drop-
+           down list & which you will validate as a number.  It is fine to also
+           have min and max allowable values.)
+
+
+Design your form as follows:
+
+•	Decide what other questions you should ask
+
+•	Group your questions and use a fieldset and legend to show the user how they are grouped.
+
+•	Decide how to inform blind users about required fields
+
+•	Your form should be nicely laid out and include an airline logo or something somewhat appropriate for a frequent flyer club.
+
+2.	Validating your form
+
+Having designed your form you should make a list of the items you want to verify and what you want to check.   
+
+Next start writing your validating function – which will do one of the following:
+a.	If some item is not filled in correctly then you will show the user a message which pinpoints the item or items that needs to be fixed.
+
+You may choose to highlight the field name in red, or you may have messages which appear and disappear with error messages.  (Think about the hidden and visibility properties).
+
+Think about blind users.
+
+Return false.
+
+
+b.	If everything validates, then be sure any previous error messages are gone, an appropriate message is alerted to the user,  and return true.
+
+c.	NOTE: Think about what you need to do to remove the error messages if a form first doesn’t validate and then does.
+      
+               As you write this code, you will want to make use of the validation 
+               functionality which is built into HTML5 for the email type, but b/c 
+               telephone numbers are so different world-wide, you will need to choose 
+               a pattern and a regex for North American phones.
+
+                You have  some links on form validation, including what you read for 
+                Assignment 2. For your conveneience they are reproduced below:
+
+https://html.spec.whatwg.org/multipage/forms.html#e-mail-state-(type=email)   (This is from the group which wrote HTML5; it has all the specs)
+
+https://www.sitepoint.com/client-side-form-validation-html5/   Great reference & from a good site
+
+http://www.the-art-of-web.com/html/html5-form-validation/   From HW
+
+https://www.geeksforgeeks.org/form-validation-using-html-javascript/ From HW
+
+https://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145  From HW
+
+http://stackoverflow.com/questions/16262797/html-form-action-and-onsubmit-issues  Look at the example which has an update (2nd example on the page).  The example is from s3m3n
+
+https://www.html5rocks.com/en/tutorials/forms/html5forms/#toc-validation   This is another useful site
+
+https://www.accessibility-developer-guide.com/examples/forms/ From HW on accessibiltiy.
+
+http://www.w3schools.com/TAGS/ref_httpmethods.asp  Good straight forward summary of GET vs POST
+
+If you are still confused, look at 
+https://www.w3.org/wiki/HTML_forms_-_the_basics  and 
+https://www.w3.org/wiki/HTML5_form_additions
+
+Finally, for more advanced vaidation issues, there is a ValidityState, which you can access with your JavaScript.  You can learn about it at:
+
+https://javascript.plainenglish.io/making-most-of-html-input-box-built-in-validation-methods-e87e502ba6a9 A good introduction
+
+https://developer.mozilla.org/en-US/docs/Web/API/ValidityState All the details
+
+
+Skills need for this project:
+•	Deciding on what information and questions should go on the form.
+•	Grouping the items and choosing fieldsets and legends
+•	Creating an appropriate visual design for the form.
+•	Coding the form, including labels
+•	Making sure the form is accessible
+•	Broad design of the validating function
+•	Deciding how to handle incorrect or missing input (i.e. an invalid entry)
+•	Detailed coding the validating function for 
+o	checkboxes and radio buttons
+o	required fields
+o	credit card numbers
+o	dates (e. g. no Feb. 30)
+o	text boxes and nunbers
+•	Making sure that if there is invalid input which is corrected then no error messages show.
+•	Keeping the project on schedule.
+•	Maintaining any project notes and keeping versions controlled.
+•	Team spirit!
