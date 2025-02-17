@@ -131,12 +131,18 @@
 			<span class="error" id="confirmPasswordError">Passwords must match</span>
 		</fieldset>
 
-		<button type="reset">Reset</button>
-		<button type="submit">Register</button>
+		<button type="button" id="resetButton">Reset</button>
+		<button type="submit" id="submitForm">Register</button>
 	</form>
 
 <script>
 
+	//reset form
+document.getElementById("resetButton").addEventListener("click", function() {
+    document.flyerForm.reset();
+});
+
+	
 document.addEventListener("DOMContentLoaded", function () {
     // Select form elements
     const form = document.getElementById("registrationForm");
