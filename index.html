@@ -63,6 +63,35 @@
 			<span class="error" id="phoneError">Invalid phone number</span><br>
 		</fieldset>
 
+<fieldset>
+    <legend>Credit Card Information</legend>
+    
+    <!-- Name on Card -->
+    <label for="cardName">Name on Card:</label>
+    <input type="text" id="cardName" name="cardName" pattern="^[A-Za-z\s\-']{2,50}$" required>
+    <span class="error" id="cardNameError">Enter a valid name</span>
+    <br><br>
+
+    <!-- Credit Card Number -->
+    <label for="card">Credit Card Number:</label>
+    <input type="text" id="card" name="card" pattern="^(?:4\d{3}|5[1-5]\d{2}|3[47]\d{2}|6(?:011|5\d{2}))[-\s]?\d{4}[-\s]?\d{4}[-\s]?\d{4,7}$" required>
+    <span class="error" id="cardError">Enter a valid credit card number</span>
+    <br><br>
+
+    <!-- Expiration Date (MM/YY) -->
+    <label for="expDate">Expiration Date (MM/YY):</label>
+    <input type="text" id="expDate" name="expDate" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+    <span class="error" id="expDateError">Enter a valid expiration date (MM/YY)</span>
+    <br><br>
+
+    <!-- CVV Code (3 or 4 digits) -->
+    <label for="cvv">CVV Code:</label>
+    <input type="text" id="cvv" name="cvv" pattern="^\d{3,4}$" required>
+    <span class="error" id="cvvError">Enter a valid CVV (3 or 4 digits)</span>
+    <br><br>
+</fieldset>
+
+
 		<fieldset>
 			<legend>Address</legend>
 			<label for="country">Country:</label>
