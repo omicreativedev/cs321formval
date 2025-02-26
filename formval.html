@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+	<title>Frequent Flyer Registration</title>
+
+
+	<link
+		href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
+		rel="stylesheet">
+
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+
+	<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+	<header role="banner">
+		<section id="controls">
+			<div id="controls">
+				<button class="control" onclick="changeFont()">Read In Arial Font</button>
+				<span class="sr-only">
+					[Button disabled without javascript.]
+				</span>
+			</div>
+		</section>
+
+		<a href="#flyerForm" class="sr-only sr-only-focusable">Skip to registration form</a>
+
+		<div class="logo-div">
+			<img class="logo" src="plane.png" alt="airplane logo">
+			<h1>Frequent Flyer Registration</h1>
+		</div>
+	</header>
+	<main role="main">
+		<section id="form">
+			<div id="form">
+
+				<form id="flyerForm" onsubmit="return false;">
+
+					<!-- Personal Information Section -->
+					<fieldset>
+						<legend>Personal Information</legend>
+
+						<div class="infs sals">
+							<span class="bold">Salutation:</span>
+							<span class="sr-only">Required Field</span>
+							<label for="Mr"><input type="radio" name="salutation" id="Mr" value="Mr."> Mr.</label>
+							<label for="Ms"><input type="radio" name="salutation" id="Ms" value="Ms."> Ms.</label>
+							<label for="Dr"><input type="radio" name="salutation" id="Dr" value="Dr."> Dr.</label>
+							<label for="Rev"><input type="radio" name="salutation" id="Rev" value="Rev."> Rev.</label>
+							<label for="None"><input type="radio" name="salutation" id="None" value="N/A" required> N/A</label>
+							<span class="error" id="salutationError">Select a salutation</span>
+						</div>
+
+						<div class="infs">
+							<label for="fname">First Name:<span class="sr-only">Required Field</span></label>
+							<input type="text" id="fname" name="fname" aria-describedby="fnameError" autocomplete="given-name"
+								required>
+							<span class="error" id="fnameError" aria-live="assertive">First name is required</span><br>
+						</div>
+						<div class="infs">
+							<label for="lname">Last Name:<span class="sr-only">Required Field</span></label>
+							<input type="text" id="lname" name="lname" aria-describedby="lnameError" autocomplete="family-name"
+								required>
+							<span class="error" id="lnameError" aria-live="assertive">Last name is required</span><br>
+						</div>
+						<div class="infs">
+							<label for="dob">Date of Birth:<span class="sr-only">Required Field</span></label>
+							<input type="date" id="dob" name="dob" required>
+							<span class="error" id="dobError" aria-live="assertive">Date of birth is required</span><br>
+						</div>
+					</fieldset>
+
+					<!-- Contact Information Section -->
+
+					<fieldset>
+
+						<legend>Contact Information</legend>
+
+						<div class="infs">
+
+							<label for="email">Email:<span class="sr-only">Required Field</span></label>
+							<input type="email" id="email" name="email" aria-describedby="emailError" autocomplete="email" required>
+							<span class="error" id="emailError" aria-live="assertive">Email is required</span>
+						</div>
+
+						<div class="infs">
+
+							<label for="phone">Phone (e.g. 123-123-1234):<span class="sr-only">Required Field</span></label>
+							<input type="tel" id="phone" autocomplete="tel" name="phone" aria-describedby="phoneError"
+								pattern="^\d{3}[.\-\s]?\d{3}[.\-\s]?\d{4}$" required>
+							<span class="error" id="phoneError" aria-live="assertive">Phone number is required</span>
+						</div>
+
+					</fieldset>
+
+					<!-- Credit Card Information Section -->
+
+					<fieldset>
+
+						<legend>Credit Card Information</legend>
+
+						<div class="infs">
+							<label for="cardName">Name on Card:<span class="sr-only">Required Field</span></label>
+							<input type="text" id="cardName" aria-describedby="cardNameError" name="cardName"
+								pattern="^[A-Za-z\s\-']{2,50}$" required>
+							<span class="error" id="cardNameError" aria-live="assertive">Enter a valid name</span>
+						</div>
+
+						<div class="infs">
+							<label for="card">Credit Card Number (e.g. 4012888888888888):<span class="sr-only">Required
+									Field</span></label>
+							<input type="text" id="card" autocomplete="cc-number" name="card" aria-describedby="cardError"
+								pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$"
+								required>
+							<span class="error" id="cardError" aria-live="assertive">Enter a valid credit card number</span>
+						</div>
+
+
+						<div class="infs">
+							<label for="expDate">Expiration Date (MM/YY):<span class="sr-only">Required Field</span></label>
+							<input type="text" id="expDate" aria-describedby="expDateError" name="expDate"
+								pattern="^(0[1-9]|1[0-2])\/\d{2}$" required>
+							<span class="error" id="expDateError" aria-live="assertive">Enter a valid expiration date (MM/YY)</span>
+						</div>
+
+						<div class="infs">
+							<label for="cvv">CVV Code (3 or 4 digits):<span class="sr-only">Required Field</span></label>
+							<input type="text" id="cvv" name="cvv" aria-describedby="cvvError" pattern="^\d{3,4}$" required>
+							<span class="error" id="cvvError" aria-live="assertive">Enter a valid CVV (3 or 4 digits)</span>
+						</div>
+
+					</fieldset>
+
+					<!-- Address Section -->
+
+					<fieldset>
+
+						<legend>Address</legend>
+
+						<div class="infs">
+							<label for="address">Street Address:<span class="sr-only">Required Field</span></label>
+							<input type="text" id="address" name="address" required>
+							<span class="error" id="addressError" aria-live="assertive">Address is required</span><br>
+						</div>
+
+						<div class="infs">
+
+							<label for="country">Country:<span class="sr-only">Required Field</span></label>
+							<select id="country" name="country" required>
+								<option value="" disabled selected>Select Country</option>
+								<option value="US">United States</option>
+								<option value="CA">Canada</option>
+
+							</select>
+							<span class="error" id="countryError" aria-live="assertive">Country is required</span>
+						</div>
+
+						<div class="infs">
+							<label for="state">State/Province:<span class="sr-only">Required Field</span></label>
+							<select id="state" name="state" required>
+								<option value="" disabled selected>Select a State/Province</option>
+							</select>
+							<span class="error" id="stateError" aria-live="assertive">State/Province is required</span><br>
+
+
+						</div>
+
+						<div class="infs">
+
+							<label for="postal">Zip/Postal Code:<span class="sr-only">Required Field</span></label>
+							<input type="text" autocomplete="postal-code" id="postal" name="postal" aria-describedby="postalError"
+								required>
+							<span class="error" id="postalError" aria-live="assertive">Invalid format</span>
+
+						</div>
+
+					</fieldset>
+
+					<!-- Additional Preferences Section -->
+
+					<fieldset>
+
+						<legend>Additional Preferences <span class="sr-only">Optional Fields</span></legend>
+
+						<div class="infs">
+							<label><input type="checkbox" name="updates" value="email"> Click for email updates about deals and
+								promotions</label>
+						</div>
+
+						<div class="infs">
+							<label><input type="checkbox" name="accommodations" value="disabled"> I am disabled and need someone to
+								call
+								about
+								accommodations</label>
+						</div>
+
+						<div class="infs">
+							<label><input type="checkbox" name="pet" value="pet"> I have a pet that I fly with</label>
+
+						</div>
+					</fieldset>
+
+					<!-- Account Security Section -->
+
+					<fieldset>
+
+						<legend>Account Security</legend>
+
+						<div class="infs">
+							<label for="password">Password:<span class="sr-only">Required Field</span></label>
+							<input type="password" id="password" name="password" aria-describedby="passwordError" required>
+							<span class="error" id="passwordError" aria-live="assertive">Password is required</span><br>
+						</div>
+
+						<div class="infs">
+							<label for="confirmPassword">Confirm Password:<span class="sr-only">Required Field</span></label>
+							<input type="password" id="confirmPassword" name="confirmPassword" aria-describedby="confirmPasswordError"
+								required>
+							<span class="error" id="confirmPasswordError" aria-live="assertive">Passwords must match</span>
+						</div>
+					</fieldset>
+
+					<!-- Reset & Registration Buttons -->
+					<button type="reset" id="resetForm" aria-label="Reset the form">Reset</button>
+
+					<button type="submit" aria-label="Submit the registration form" id="submitForm">Register</button>
+				</form>
+
+
+
+			</div>
+		</section>
+	</main>
+
+	<script src="script2.js"></script>
+</body>
+
+</html>
