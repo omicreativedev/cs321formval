@@ -86,6 +86,12 @@
 			margin-bottom: 5px;
 		}
 
+		.bold {
+			font-weight: 600;
+			display: block;
+			margin-bottom: 5px;
+		}
+
 
 		input,
 		select {
@@ -156,7 +162,7 @@
 		#controls button {
 			font-family: Arial, Helvetica, sans-serif;
 			font-size: small;
-		background-color: #2564ac
+			background-color: #2564ac;
 			border: #357ABD 1px solid;
 			border-radius: 5px;
 			padding: 10px;
@@ -221,7 +227,8 @@
 						<legend>Personal Information</legend>
 
 						<div class="infs sals">
-							<label for="salutation">Salutation:<span class="sr-only">Required Field</span></label>
+							<span class="bold">Salutation:</span>
+							<span class="sr-only">Required Field</span>
 							<label for="Mr"><input type="radio" name="salutation" id="Mr" value="Mr."> Mr.</label>
 							<label for="Ms"><input type="radio" name="salutation" id="Ms" value="Ms."> Ms.</label>
 							<label for="Dr"><input type="radio" name="salutation" id="Dr" value="Dr."> Dr.</label>
